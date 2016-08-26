@@ -135,7 +135,10 @@ var MapAPP={
 	drawMap:function (point) {
 		var marker=new BMap.Marker(point);
  	 	var map=new BMap.Map(MapAPP.id);
+ 	 	var traffic=new BMap.TrafficLayer();
+ 	 	map.addTileLayer(traffic);
  	 	map.addOverlay(marker);
+ 	 	map.addControl(new BMap.GeolocationControl());
  	 	map.centerAndZoom(point,15);
 	}
 
