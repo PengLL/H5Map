@@ -80,6 +80,10 @@
 
 // 对象初始化器来写JS
 
+// 注入fastclick
+$(function () {
+	 FastClik.attach(document.body);
+});
 // 初始化一个实际的Map对象
 var MapAPP={
 	ak:"bj4GqTFHTMM3DdWN5yU8vlGQUx5ORZMB",
@@ -141,7 +145,10 @@ var MapAPP={
  	 	map.addControl(new BMap.GeolocationControl());
  	 	map.centerAndZoom(point,15);
 	}
-
 }
+// 绑定事件
+$(".refresh").click(function () {
+	window.location.reload();
+})
 // 调用init方法进行初始化，显示当前位置
 MapAPP.init();
