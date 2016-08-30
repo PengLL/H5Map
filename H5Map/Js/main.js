@@ -143,6 +143,9 @@ var MapAPP={
  	 	map.addTileLayer(traffic);
  	 	map.addOverlay(marker);
  	 	map.addControl(new BMap.GeolocationControl());
+ 	 	map.addControl(new BMap.ScaleControl());
+ 	 	map.addControl(new BMap.MapTypeControl());    
+		map.setCurrentCity("北京");
  	 	map.centerAndZoom(point,15);
 	}
 }
