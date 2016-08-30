@@ -38,7 +38,8 @@ $fontColor:#fff;
 			height: 100%;
 			&:active
 			{
-				background-color:#000;
+				background-color:#eee;
+				color: #000;
 			}
 			div
 			{
@@ -81,7 +82,7 @@ $fontColor:#fff;
 	position: fixed;
 	top: 10%;
 	left: 10%;
-	box-shadow: 6px 6px 5px #333;
+	box-shadow: 6px 8px 5px #333;
 	z-index: 2;
 	#head
 	{	
@@ -129,7 +130,7 @@ $fontColor:#fff;
 			color: #fff;
 			&:active
 			{
-				background-color: #ddd;
+				background-color: #eee;
 				color: #000;
 			}
 		}
