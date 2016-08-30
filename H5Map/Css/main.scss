@@ -1,17 +1,24 @@
-html,body,nav,ul,li,div,span,i,label
+/*set default style*/
+html,body,nav,ul,li,div,span,i,label,button
 {
 	margin: 0;
 	padding: 0;	
 	font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei',  Arial, sans-serif;
 }
-html,body,ul,li,nav
+html,body,ul,nav
 {
 	height: 100%;
 }
+ul 
+{
+	list-style: none;
+}
+// map
 #container
 {
 	height: 90%;
 }
+// navigator
 $fontColor:#fff;
 .nav
 {
@@ -20,7 +27,6 @@ $fontColor:#fff;
  	background-color: rgb(3,38,58);
 	ul
 	{
-		list-style: none;;
 		display: flex;
 		justify-content: space-around;
 		li.item
@@ -29,6 +35,7 @@ $fontColor:#fff;
 			text-align: center;
 			color: $fontColor;
 			font-size: 20px;
+			height: 100%;
 			&:active
 			{
 				background-color:#000;
@@ -52,5 +59,79 @@ $fontColor:#fff;
 				}
 			}
 		}		
+	}
+}
+// mask
+#mask
+{
+	width: 100%;
+	height:100%;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 1;
+	position: fixed;
+	top: 0;
+	display: none;
+}
+// modal
+#modal
+{
+	display: none;
+	width: 80%;
+	height: 60%;
+	position: fixed;
+	top: 10%;
+	left: 10%;
+	box-shadow: 6px 6px 5px #333;
+	z-index: 2;
+	#head
+	{	
+		text-align: center;
+		height: 10%;
+		width: 100%;
+		background-color:rgb(20, 0, 28);
+		color: #fff;
+		border-bottom: 1px solid #fff;
+		font-size: 20px;
+		display: table;
+		label
+		{
+			display: table-cell;
+			vertical-align: middle;
+			font-weight: bold;
+		}
+	}
+	#body
+	{
+		height: 80%;
+		background-color: #eee;
+		overflow: hidden;
+		ul
+		{
+			margin-top: 10%;
+			li 
+			{
+				line-height: 50px;
+				font-size: 20px;
+				margin-left: 5%;
+			}
+		}
+	}
+	#footer
+	{
+		height:10%;
+		border-top: 1px solid #eee;
+		button
+		{
+			width: 100%;
+			height: 100%;
+			font-size: 18px;
+			background-color: rgb(20, 0, 28);
+			color: #fff;
+			&:active
+			{
+				background-color: #ddd;
+				color: #000;
+			}
+		}
 	}
 }

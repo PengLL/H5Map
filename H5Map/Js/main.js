@@ -153,5 +153,14 @@ var MapAPP={
 $(".refresh").click(function () {
 	window.location.reload();
 })
+$("#footer button").click(function () {
+	 $("#modal").fadeOut();
+	 $("#mask").fadeOut();
+})
+$(".declare").click(function () {
+		$("#mask").fadeIn();
+		$("#modal").fadeIn();
+});
+
 // 调用init方法进行初始化，显示当前位置
 MapAPP.init();

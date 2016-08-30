@@ -1,10 +1,14 @@
-html, body, nav, ul, li, div, span, i, label {
+/*set default style*/
+html, body, nav, ul, li, div, span, i, label, button {
   margin: 0;
   padding: 0;
   font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei',  Arial, sans-serif; }
 
-html, body, ul, li, nav {
+html, body, ul, nav {
   height: 100%; }
+
+ul {
+  list-style: none; }
 
 #container {
   height: 90%; }
@@ -14,14 +18,14 @@ html, body, ul, li, nav {
   border-top: 4px inset #fff;
   background-color: #03263a; }
   .nav ul {
-    list-style: none;
     display: flex;
     justify-content: space-around; }
     .nav ul li.item {
       flex: 1;
       text-align: center;
       color: #fff;
-      font-size: 20px; }
+      font-size: 20px;
+      height: 100%; }
       .nav ul li.item:active {
         background-color: #000; }
       .nav ul li.item div {
@@ -36,5 +40,59 @@ html, body, ul, li, nav {
           width: 25px;
           height: 25px;
           margin: 0 auto; }
+
+#mask {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  display: none; }
+
+#modal {
+  display: none;
+  width: 80%;
+  height: 60%;
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  box-shadow: 6px 6px 5px #333;
+  z-index: 2; }
+  #modal #head {
+    text-align: center;
+    height: 10%;
+    width: 100%;
+    background-color: #14001c;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    font-size: 20px;
+    display: table; }
+    #modal #head label {
+      display: table-cell;
+      vertical-align: middle;
+      font-weight: bold; }
+  #modal #body {
+    height: 80%;
+    background-color: #eee;
+    overflow: hidden; }
+    #modal #body ul {
+      margin-top: 10%; }
+      #modal #body ul li {
+        line-height: 50px;
+        font-size: 20px;
+        margin-left: 5%; }
+  #modal #footer {
+    height: 10%;
+    border-top: 1px solid #eee; }
+    #modal #footer button {
+      width: 100%;
+      height: 100%;
+      font-size: 18px;
+      background-color: #14001c;
+      color: #fff; }
+      #modal #footer button:active {
+        background-color: #ddd;
+        color: #000; }
 
 /*# sourceMappingURL=main.css.map */
